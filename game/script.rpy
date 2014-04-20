@@ -1,6 +1,6 @@
 # Список ресурсов.
 
-image bg room kodin = "K_1_ROOM_SKETCH.png"
+image bg room kodin = "rooms/KODIN/back/all.png"
 image bg locker = "locker_empty.png"
 image color fade = Solid("#00000099")
 image bust main = "main_character.png"
@@ -44,7 +44,12 @@ label KODIN_ROOM_SCENE:
 
     $ room_name = "KODIN"
     $ room_items = []
-    $ room_items.append(RoomItem("book", "HOOK", "Книга", 243, 79, True, " Магический фолиант в твердой обложке. От него пахнет ладаном."))
+    #$ room_items.append(RoomItem("", "HOOK", "Книга", 243, 79, True, " Магический фолиант в твердой обложке. От него пахнет ладаном."))
+    $ room_items.append(RoomItem("obj1",1,"Фигурка Распутницы", 0,0, True, "Сора. Магический фолиант в твердой обложке. От него пахнет ладаном. Сора. Магический фолиант в твердой обложке. От него пахнет ладаном. Сора. Магический фолиант в твердой обложке. От него пахнет ладаном."))
+    $ room_items.append(RoomItem("obj2",1,"Фигурка Учёного", 0,0, True, "Курису"))
+    $ room_items.append(RoomItem("obj3",1,"Фигурка Воительницы", 0,0, True, "Рёги."))
+    $ room_items.append(RoomItem("obj4",1,"Наушники", 0,0, True, "Дешевые"))
+
 
     call screen room_explore
     return

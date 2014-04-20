@@ -23,33 +23,25 @@ init python:
         def __init__(self, tag=None, approach=None, name = None, x = 0, y = 0, is_active = True, description = None):
             """
             Конструктор класа
-
                 `tag`
                     Описывает ключевое слово, по которому выбираются файлы предметов.
-
                 `approach`
                     Определяет 'подход' предмета. В идеале перечисление, но так строковый:
                         "Hook" - крючок
                         "Needle" - игла
                         "Key" - ключ
                         "Simple" - обычный
-
                 `name`
                     Название предмета, для удобства пересекается с `tag`. Показывается в подсказке
                     и в названии при осмотре.
-
                 `x`
                     Положение предмета по ости X.
-
                 `y`
                     Положение предмета по оси Y.
-
                 `is_active`
                     Активен ли предмет для использования? True - да, False - нет.
-
                 `description`
                     Описание предмета, используется при его осмоттре.
-
             """
             self.tag = tag
             self.type = approach
@@ -69,7 +61,8 @@ screen room_explore:
     tag tag_room_explore # Если другой screen будет помечен таким же тего, текущий заменится.
     
     modal True # Может отключить?
-
+    $ room_back = "rooms/" + room_name + "/back/clear.png"
+    add room_back
     if room_items:
         for index, item in enumerate(room_items):
             $ item_filemask = "rooms/"+room_name+"/items/buttons/"+item.tag+"_%s.png"
@@ -89,20 +82,26 @@ screen room_explore:
 ###########################################
 screen room_item_dialog:
     #tag tag_room_item_dialog
-    add "color fade"    # Добавляет затенение экрану, описано в script.rpy
+    #add "color fade"    # Добавляет затенение экрану, описано в script.rpy
                         #TODO пернести описания ресурсов в специальную init зону в отдельном скрипте
-    frame:
-        #left_padding 200
-        #right_padding 200
-        #top_padding 10
-        #bottom_padding 10
-        xalign 0.5
-        yalign 0.6
-        $ item_picture = "rooms/"+room_name+"/items/pictures/"+my_item.tag+".png"
-        add item_picture xalign 0.5 yalign 0.3
-        text my_item.name size 36 xalign 0.5 yalign 0.5
-        text my_item.description xalign 0.5 yalign 0.7
-        textbutton "закрыть" action Hide("room_item_dialog") xalign 0.7 yalign 1.0
+
+    # Фон меню осмотра.
+    $ gui_splash_menu_bg = "gui/rooms/splash_menu_bg.png"
+    add gui_splash_menu_bg xpos 540 ypos 140
+
+    # Картинка предмета.
+    #$ item_picture = "rooms/"+room_name+"/items/pictures/"+my_item.tag+".png"
+    #add item_picture xalign 0.5 yalign 0.3
+
+    # Заголовок
+    text my_item.name xanchor 0.5 xpos 1470 ypos 190 font "gui/fonts/calibri.ttf" size 36
+    # Описание
+    text my_item.description maximum (480,315) xpos 1240 ypos 250 font "gui/fonts/calibri.ttf" size 24
+
+    # Изучить
+    imagebutton auto "gui/rooms/btn1_%s.png" xpos 1280 ypos 630
+    # Продолжить
+    imagebutton auto "gui/rooms/btn2_%s.png" xpos 1280 ypos 740 action Hide("room_item_dialog")
 
 ###########################################
 #           Подсказка для предмета
