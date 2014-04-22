@@ -63,19 +63,28 @@ screen room_explore:
     modal True # Может отключить?
     $ room_back = "rooms/" + room_name + "/back/clear.png"
     add room_back
-    if room_items:
-        for index, item in enumerate(room_items):
-            $ item_filemask = "rooms/"+room_name+"/items/buttons/"+item.tag+"_%s.png"
-            #TODO Поправить. Должно быть условие else, при котором вместо кнопки выводится idle картинка. или выставить еще какое стостояние кнопки.
-            if item.is_active:
-                imagebutton:
-                    auto item_filemask 
-                    focus_mask True # Использовать как активную зону только непрозрачные изображения.
-                    hovered Show("room_item_hint", my_hint = item.name) # Вызов подсказки
-                    unhovered Hide("room_item_hint") # Скрытие подсказки
-                    xpos item.x
-                    ypos item.y
-                    action Show("room_item_dialog", my_item = item) # Вызов осмотра предмета.
+    #for index, item in enumerate(DGDATA['items'][room_name]..iteritems()):
+    $ _align = 0
+    for _tag in DGDATA['items'][room_name].iterkeys():
+
+        $ _align += 1080/30
+        $ item = DGDATA['items'][room_name][_tag]
+        $ item_filemask = "rooms/"+room_name+"/items/buttons/"+_tag+"_%s.png"
+
+        # Вывод списка предметов и прочей шняги.
+        #$ mtxt = _tag + " " + item['name'] + " " + str(item['x']) + ":" + str(item['y']) + " "+item_filemask+" ;"
+        #text mtxt color "#000" ypos _align
+
+        #TODO Поправить. Должно быть условие else, при котором вместо кнопки выводится idle картинка. или выставить еще какое стостояние кнопки.
+        if item['is_active']:
+            imagebutton:
+                auto item_filemask 
+                focus_mask True # Использовать как активную зону только непрозрачные изображения.
+                hovered Show("room_item_hint", my_hint = item['name']) # Вызов подсказки
+                unhovered Hide("room_item_hint") # Скрытие подсказки
+                xpos item['x']
+                ypos item['y']
+                action Show("room_item_dialog", my_item = item, my_tag = _tag) # Вызов осмотра предмета.
 
 ###########################################
 #           Осмотр предмета
@@ -90,13 +99,13 @@ screen room_item_dialog:
     add gui_splash_menu_bg xpos 540 ypos 140
 
     # Картинка предмета.
-    #$ item_picture = "rooms/"+room_name+"/items/pictures/"+my_item.tag+".png"
+    #$ item_picture = "rooms/"+room_name+"/items/pictures/"+my_tag+".png"
     #add item_picture xalign 0.5 yalign 0.3
 
     # Заголовок
-    text my_item.name xanchor 0.5 xpos 1470 ypos 190 font "gui/fonts/calibri.ttf" size 36
+    text my_item['name'] xanchor 0.5 xpos 1470 ypos 190 font "gui/fonts/calibri.ttf" size 36
     # Описание
-    text my_item.description maximum (480,315) xpos 1240 ypos 250 font "gui/fonts/calibri.ttf" size 24
+    text my_item['description'] maximum (480,315) xpos 1240 ypos 250 font "gui/fonts/calibri.ttf" size 24
 
     # Изучить
     imagebutton auto "gui/rooms/btn1_%s.png" xpos 1280 ypos 630
