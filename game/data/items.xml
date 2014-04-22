@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <character name ="K_1">
+      <item>
+      <tag>art_books</tag>
+      <name>Книги по искусству</name>
+      <approach>0</approach>
+      <x>170</x>
+      <y>576</y>
+      <description>Бахес</description>
+      <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>bed</tag>
+        <name>Кровать</name>
+        <approach>0</approach>
+        <x>1005</x>
+        <y>614</y>
+        <description>Простая и удобная.</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>bra</tag>
+        <name>Лифчик</name>
+        <approach>1</approach>
+        <x>1411</x>
+        <y>895</y>
+        <description>Розовый</description>
+        <is_active>0</is_active>
+      </item>
+      <item>
+        <tag>panties</tag>
+        <name>Трусики</name>
+        <approach>1</approach>
+        <x>1446</x>
+        <y>659</y>
+        <description>Черные</description>
+        <is_active>0</is_active>
+      </item>
+      <item>
+        <tag>headphones</tag>
+        <name>Наушники</name>
+        <approach>1</approach>
+        <x>347</x>
+        <y>656</y>
+        <description>Дорогие.</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>fig_3</tag>
+        <name>Фигурка 3</name>
+        <approach>0</approach>
+        <x>320</x>
+        <y>275</y>
+        <description>animu shit</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>fig_2</tag>
+        <name>Фигурка 2</name>
+        <approach>0</approach>
+        <x>241</x>
+        <y>271</y>
+        <description>anime shit</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>fig_1</tag>
+        <name>Фигурка 1</name>
+        <approach>0</approach>
+        <x>159</x>
+        <y>275</y>
+        <description>animu shit</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>folders</tag>
+        <name>Папки</name>
+        <approach>0</approach>
+        <x>169</x>
+        <y>423</y>
+        <description>Папки с рисунками</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>left_picture</tag>
+        <name>Картина</name>
+        <approach>0</approach>
+        <x>3</x>
+        <y>286</y>
+        <description>Абстрактная картина</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>cup</tag>
+        <name>Чашка</name>
+        <approach>0</approach>
+        <x>267</x>
+        <y>821</y>
+        <description>В ней остывший кофе</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>monitor</tag>
+        <name>Монитор</name>
+        <approach>0</approach>
+        <x>31</x>
+        <y>606</y>
+        <description>Плоский</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>tablet</tag>
+        <name>Планшет</name>
+        <approach>0</approach>
+        <x>348</x>
+        <y>765</y>
+        <description>Ваком какой-нибудь.</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>kb_mouse</tag>
+        <name>Клавиатура и мышь</name>
+        <approach>0</approach>
+        <x>162</x>
+        <y>755</y>
+        <description>Гильберт, ты сам придумаешь.</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>pencils</tag>
+        <name>Карандаши</name>
+        <approach>0</approach>
+        <x>433</x>
+        <y>619</y>
+        <description>Мягкие. Сради них затесался грифель.</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>diary</tag>
+        <name>Дневник</name>
+        <approach>0</approach>
+        <x>366</x>
+        <y>714</y>
+        <description>Личный дневник</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>random_books</tag>
+        <name>Книги</name>
+        <approach>0</approach>
+        <x>285</x>
+        <y>609</y>
+        <description>Бульварный роман, «Анна Коренина».</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>brushes</tag>
+        <name>Кисти</name>
+        <approach>0</approach>
+        <x>496</x>
+        <y>459</y>
+        <description>Жесткие и мягки</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>chest</tag>
+        <name>Сундук</name>
+        <approach>0</approach>
+        <x>358</x>
+        <y>503</y>
+        <description>В нем много одежды</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>cosmetics</tag>
+        <name>Коспетика</name>
+        <approach>0</approach>
+        <x>439</x>
+        <y>288</y>
+        <description>Много зеленых цветов. Она одинока?</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>paper</tag>
+        <name>Листок бумаги</name>
+        <approach>0</approach>
+        <x>333</x>
+        <y>850</y>
+        <description>Чистый листок бумаги.</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>r_picture_1</tag>
+        <name>Картина 1</name>
+        <approach>0</approach>
+        <x>1354</x>
+        <y>250</y>
+        <description>Опять какая-то абстракция.</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>r_picture2</tag>
+        <name>Картина 2</name>
+        <approach>0</approach>
+        <x>1509</x>
+        <y>227</y>
+        <description>Еще абстракция.</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>r_picture_3</tag>
+        <name>Картинка 3</name>
+        <approach>0</approach>
+        <x>1742</x>
+        <y>207</y>
+        <description>И еще абстракция.</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>condom</tag>
+        <name>Презерватив</name>
+        <approach>1</approach>
+        <x>106</x>
+        <y>908</y>
+        <description>Лошадинный.</description>
+        <is_active>0</is_active>
+      </item>
+      <item>
+        <tag>cat</tag>
+        <name>Кошка</name>
+        <approach>4</approach>
+        <x>1251</x>
+        <y>719</y>
+        <description>Она ненавидит тебя.</description>
+        <is_active>1</is_active>
+      </item>
+      <item>
+        <tag>fluids</tag>
+        <name>Флюиды</name>
+        <approach>2</approach>
+        <x>536</x>
+        <y>840</y>
+        <description>Кто-то много шликает.</description>
+        <is_active>0</is_active>
+      </item>
+      <item>
+        <tag>recycle_full</tag>
+        <name>Корзина с мусором</name>
+        <approach>0</approach>
+        <x>818</x>
+        <y>750</y>
+        <description>От них пахнет рыбой.</description>
+        <is_active>0</is_active>
+      </item>
+      <item>
+        <tag>recycle</tag>
+        <name>ПУстая корзина</name>
+        <approach>0</approach>
+        <x>818</x>
+        <y>761</y>
+        <description>Пустая корзинка. Мусор выносили совсем недавно.</description>
+        <is_active>1</is_active>
+      </item>
+      
+  </character>
+</resources>
+
+
+
