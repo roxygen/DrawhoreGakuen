@@ -18,6 +18,7 @@ local.properties
 saves/
 *.save
 *.rpyc
+*.*.rpyb
 log.txt
 traceback.txt
 errors.txt
