@@ -18,7 +18,7 @@ local.properties
 saves/
 *.save
 *.rpyc
-*.*.rpyb
+*.rpyb
 log.txt
 traceback.txt
 errors.txt
@@ -221,3 +221,7 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+*.rpyb
+game/data/~items.xml
+game/bytecode.rpyb
+game/bytecode.rpyb
